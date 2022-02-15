@@ -1,11 +1,10 @@
-/* eslint-disable react/prefer-stateless-function */
-import React, { Component } from 'react';
-import Calculator from './components/calculator';
+import React from 'react';
+import Background from './components/background';
 
-export default class App extends Component {
-  render() {
-    return (
-      <Calculator />
-    );
-  }
-}
+const App = () => (
+  <>
+    <Background />
+  </>
+);
+
+export default App;

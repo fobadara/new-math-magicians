@@ -1,0 +1,28 @@
+#keypad-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgb(241, 228, 228);
+}
+
+button {
+  border: solid thin #fff;
+  border-radius: 0.1em;
+  padding: 10% 20%;
+  background-color: rgb(214, 202, 202);
+}
+
+button:hover {
+  filter: saturate(200%);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+#zero {
+  grid-column: span 2;
+}
+
+.right {
+  background-color: #f94;
+}

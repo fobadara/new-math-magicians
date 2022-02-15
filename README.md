@@ -1,6 +1,8 @@
-### Math Magicians
+### New Math Magicians
 
 ## Description 🏗️
+
+![Math Magicians image](img/screen.gif)
 
 "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
 
@@ -32,13 +34,19 @@ To get a local copy up and running follow these simple example steps.
 
 > clone the app by running this command
 
-```bash 
-git clone https://github.com/fobadara/math-magicians-react.git
+```bash
+  git clone https://github.com/fobadara/new-math-magicians-react.git
 ```
+>Navigate into the directory by running
+
+```bash 
+  cd new-math-magicians-react
+```
+
 > view it in your browser by running this command
 
 ```bash
-### `npm start`
+ npm start
 ```
 It runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000).

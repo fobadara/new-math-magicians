@@ -1,9 +1,13 @@
 import ReactDOM from 'react-dom';
-import App from './app';
+import { BrowserRouter } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import 'normalize.css';
-import './index.css';
+import './css/index.css';
+import App from './app';
 
 ReactDOM.render(
-  <App />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.querySelector('#root'),
 );
