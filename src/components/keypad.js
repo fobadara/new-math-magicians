@@ -1,23 +1,28 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../css/keypad.css';
 
-class Keypad extends Component {
-  createButtons() {
-    const { keys, onClick } = this.props;
+// Create button tags
+const createButtons = (props) => props.keys.map((key) => (
+  <button
+    name={key.value}
+    type="button"
+    onClick={props.onClick}
+    id={key.id}
+    className={key.class}
+    key={key.id}
+  >
+    {key.value}
+  </button>
+));
 
-    return (
-      keys.map((key) => <button name={key.value} type="button" onClick={onClick} id={key.id} className={key.class} key={key.id}>{key.value}</button>)
-    );
-  }
+const Keypad = (props) => (
+  <span className="min-vh-75" id="keypad-container">{createButtons(props)}</span>
+);
 
-  render = () => (
-    <span id="keypad-container">{this.createButtons()}</span>
-  );
-}
-
-Keypad.propTypes = {
-  keys: PropTypes.instanceOf(Array).isRequired,
-  onClick: PropTypes.func.isRequired,
+createButtons.propTypes = {
+  props: PropTypes.arrayOf(
+    PropTypes.shape({}),
+  ).isRequired,
 };
 
 export default Keypad;

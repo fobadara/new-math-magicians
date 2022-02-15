@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
+import Aside from './aside';
 import Screen from './screen';
 import Keypad from './keypad';
-import calculate from '../logic/calculate';
 
 const keys = [
   { id: 'clear', class: 'operators', value: 'AC' },
@@ -25,37 +26,33 @@ const keys = [
   { id: 'equals', class: 'operators right', value: '=' },
 ];
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: '0',
-      next: '',
-      operation: '',
-    };
-  }
+const Calculator = () => {
+  const [state, setState] = useState({
+    total: '0',
+    next: '',
+    operation: '',
+  });
 
   // Add eventlistener to buttons
-  handleButtonClick = (event) => {
-    const { total, next, operation } = calculate(this.state, event.target.name);
-    this.setState({ total, next, operation });
-  }
-
-  render = () => {
-    const data = this.state;
-    return (
-      <main>
+  const handleButtonClick = (event) => {
+    const { total, next, operation } = calculate(state, event.target.name);
+    setState({ total, next, operation });
+  };
+  return (
+    <div className="d-sm-flex justify-content-between">
+      <div className="w-25">
+        <Aside />
+      </div>
+      <div className="w-50">
         <div>
-          <div>
-            <Screen state={this.state} />
-          </div>
-          <div>
-            <Keypad keys={keys} onClick={this.handleButtonClick} state={{ ...data }} />
-          </div>
+          <Screen state={state} />
         </div>
-      </main>
-    );
-  }
-}
+        <div>
+          <Keypad keys={keys} onClick={handleButtonClick} state={state} />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Calculator;

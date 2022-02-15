@@ -1,0 +1,38 @@
+.nav-border {
+  background-color: rgb(65, 59, 59, 0.5);
+  border-bottom: solid thick #adff2f;
+  margin-bottom: 1em;
+}
+
+.navbar-brand {
+  color: #adff2f !important;
+  font-weight: 600 !important;
+  font-size: x-large !important;
+}
+
+.nav-link {
+  color: #adff2f !important;
+  font-weight: 200 !important;
+  font-size: medium !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("https://mdbcdn.b-cdn.net/img/svg/hamburger3.svg?color=00FBD8") !important;
+  height: 1.5em !important;
+  width: 1.5em !important;
+}
+
+.active {
+  background-color: rgba(19, 6, 88, 0.5) !important;
+  width: 80%;
+  padding-left: 0.2em !important;
+}
+
+.collapsible {
+  display: flex;
+  justify-content: flex-end;
+}

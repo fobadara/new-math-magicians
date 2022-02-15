@@ -1,4 +1,4 @@
-### Math Magicians
+### New Math Magicians
 
 ## Description 🏗️
 
@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 > clone the app by running this command
 
 ```bash 
-git clone https://github.com/fobadara/math-magicians-react.git
+git clone https://github.com/fobadara/new-math-magicians-react.git
 ```
 > view it in your browser by running this command
 

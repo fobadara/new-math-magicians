@@ -1,0 +1,12 @@
+body {
+  color: #000;
+  color: #fff;
+}
+
+#screen {
+  display: block;
+  height: 1em;
+  background-color: #999;
+  text-align: right;
+  padding: 1em;
+}
